@@ -1,0 +1,15 @@
+<div class="navbar">
+  <%= link_to root_path, class: "header-logo" do %>
+    <%= image_tag "cock.jpeg", alt: "Logo", class: "avatar-bordered" %>
+    <p>COCKTAIL&GARNISH</p>
+  <% end %>
+  </a>
+  <div class="header-links">
+   <%= link_to root_path do %>
+     <span>cocktails</span>
+     <sup><%= @cocktail_length %></sup>
+   <% end %>
+   <%= link_to "create", new_cocktail_path(anchor: 'footer'), class: "margin-left" %>
+   <%= link_to "contact", '#footer', class: "margin-left" %>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  height: 100px;
+  font-size: 1.125vw;
+  padding: 4.375vw 4.92021%;
+  text-transform: lowercase;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  vertical-align: baseline;
+  a {
+    margin-right: 1.875vw;
+  }
+}
