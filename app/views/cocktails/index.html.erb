@@ -21,7 +21,7 @@
        <!--  <div class="cocktail-image"> -->
 
           <% if cocktail.photo.attached? %>
-          <!-- <div class="card-pic" style="background-image: url(<%= cl_image_path cocktail.photo.key, loading: "lazy" %>);"></div> -->
+
             <%= cl_image_tag cocktail.photo.key, loading: "lazy", width: 394, height: 494, crop: :fill, class: 'cocktail-image' %>
           <% else %>
           <!-- <div class="card-pic" style="background-image: url('https://res.cloudinary.com/dfphdhnpb/image/upload/v1605272798/m3x6otcommpqtg9d1dsi.jpg', <%#= loading: 'lazy' %>)"></div> -->
