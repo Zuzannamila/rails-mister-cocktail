@@ -4,8 +4,8 @@
   font-size: 1.125vw;
   padding: 4.375vw 4.92021%;
   text-transform: lowercase;
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  // bottom: 0;
 }
 
 .footer-links {
@@ -14,5 +14,7 @@
   vertical-align: baseline;
   a {
     margin-right: 1.875vw;
+    color: black;
+    cursor: pointer;
   }
 }

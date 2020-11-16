@@ -1,4 +1,16 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, "Create new cocktail" %>
-<% end %>
+<div class="box">
+  <h3>“Sometimes a work of art comes in a glass.”
+~ Anthony T Hincks</h3>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name, placeholder: "Name", label: false %>
+    <div class="photo-input">
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="submit-button">
+      <%= f.button :submit, "+ Create new cocktail" %>
+    </div>
+
+  <% end %>
+</div>
+

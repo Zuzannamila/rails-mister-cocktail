@@ -1,8 +1,43 @@
-<h1>All the cocktails</h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
-<%= link_to "+ Create new cocktail", new_cocktail_path %>
+
+
+
+<div class="box" id="title">
+  <h1>I feel bad for people who don’t drink. When they wake up in the morning, that’s as good as they’re going to feel all day.
+<br>~ Frank Sinatra</h1>
+</div>
+
+<div class="box container-lazy-scrolling">
+
+
+<!--   <h1>All the cocktails</h1> -->
+
+
+  <ul id="cards-list">
+    <% @cocktails.each do |cocktail| %>
+    <!-- <div class="col-12 col-md-6 col-lg-4"> -->
+      <li class="list-item">
+
+        <%= link_to cocktail_path(cocktail) do %>
+       <!--  <div class="cocktail-image"> -->
+
+          <% if cocktail.photo.attached? %>
+          <!-- <div class="card-pic" style="background-image: url(<%= cl_image_path cocktail.photo.key, loading: "lazy" %>);"></div> -->
+            <%= cl_image_tag cocktail.photo.key, loading: "lazy", width: 394, height: 494, crop: :fill, class: 'cocktail-image' %>
+          <% else %>
+          <!-- <div class="card-pic" style="background-image: url('https://res.cloudinary.com/dfphdhnpb/image/upload/v1605272798/m3x6otcommpqtg9d1dsi.jpg', <%#= loading: 'lazy' %>)"></div> -->
+            <%#= image_tag "https://res.cloudinary.com/dfphdhnpb/image/upload/v1605297646/m3x6otcommpqtg9d1dsi.jpg", alt: "alttext",  loading: "lazy", class: "card-pic" %>
+            <%= cl_image_tag("wtmebrgogthuicufdkgl", width: 394, height: 494, crop: :fill, loading: "lazy", class: 'cocktail-image') %>
+          <% end %>
+       <!--  </div> -->
+          <p class='cocktail-image'><%= cocktail.name %></p>
+        <% end %>
+      </li>
+<!--     </div> -->
+    <% end %>
+
+  </ul>
+</div>
+
+
+
 

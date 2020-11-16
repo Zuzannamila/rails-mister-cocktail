@@ -1,9 +1,27 @@
-<%= @cocktail.name %>
-<% @cocktail.doses.each do |dose| %>
-  <p><%= dose.ingredient.name %></p>
-  <p><%= dose.description %></p>
-  <%= link_to '-', cocktail_dose_path(@cocktail, dose.id) , method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+<div class="box">
+<div>
+  <div class="image-of-the-cocktail">
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 484, width: 797, crop: :fill %>
+    <% else %>
+      <%= cl_image_tag("wtmebrgogthuicufdkgl", alt: "alttext", height: 484, width: 797, crop: :fill ) %>
+    <% end %>
+    <h2><%= @cocktail.name %></h2>
+  </div>
+  <div class="cocktail-doses">
+    <% @cocktail.doses.each do |dose| %>
+      <h4><%= dose.ingredient.name %><span><%= link_to '   -', cocktail_dose_path(@cocktail, dose.id), method: :delete, data: { confirm: 'Are you sure?' } %></span></h4>
+      <p><%= dose.description %></p>
 
-<%= link_to "+ Add a new dose", new_cocktail_dose_path(@cocktail) %>
+    <% end %>
+    <%= link_to "+ Add a new dose", new_cocktail_dose_path(@cocktail) %>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
 

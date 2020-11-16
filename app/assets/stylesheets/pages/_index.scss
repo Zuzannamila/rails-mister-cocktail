@@ -1,2 +1,63 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+#title {
+  margin-left: 14.62766%;
+  margin-right: 7.31383%;
+  margin-top: 3.125vw;
+  margin-bottom: 9.375vw;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+.list-item a {
+   color: black;
+
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.title h1 {
+
+  font-size: 44px;
+}
+
+.box {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+
+// magic cursor
+.cursor{
+  width: .5rem;
+  height: .5rem;
+
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(250%, 150%);
+  // transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: black;
+
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+}
+.link-grow {
+  transform: scale(7);
+  opacity: 0.9;
+}

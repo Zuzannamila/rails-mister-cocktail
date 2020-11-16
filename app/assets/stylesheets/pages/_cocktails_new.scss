@@ -1,0 +1,43 @@
+@media (min-width: 960px) {
+  .box form, .box h3{
+    width: 60%;
+  }
+}
+@media (max-width: 959px) {
+  .box form {
+    width: 80%;
+ }
+}
+.box form, .box h3 {
+  margin: 0 auto;
+
+}
+
+.form-control {
+  padding: 20px;
+  border: 0px;
+  border-bottom: 1px solid #ced4da;
+}
+.box h3 {
+  font-family: tt_norms, Helvetica;
+  padding-bottom: 9.375vw;
+  padding-top: 3.125vw;
+
+}
+.photo-input {
+  width: 100%;
+  #cocktail_photo {
+    button {
+      padding: 50px;
+    }
+  }
+}
+// input[type="file"] {
+//   padding: 50px;
+// }
+.submit-button .btn {
+  a:hover {
+    color: red;
+  }
+
+}
